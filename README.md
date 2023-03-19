@@ -1,48 +1,24 @@
-Rush Groceries App
+# hello_world
 
-This is a simple grocery app developed using Flutter that provides the following features:
+A new Flutter project created with https://flutlab.io
 
-    User registration and login
-    Email verification
-    Shopping cart and checkout
+## Getting Started
 
-Getting Started
-Prerequisites
+This project is a starting point for a Flutter application.
 
-    Flutter SDK installed
-    An emulator or physical device to run the app on
+A few resources to get you started if this is your first Flutter project:
 
-Installing
+- https://flutter.dev/docs/get-started/codelab
+- https://flutter.dev/docs/cookbook
 
-    Clone the repository to your local machine:
+For help getting started with Flutter, view our
+https://flutter.dev/docs, which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
 
-bash
+## Getting Started: FlutLab - Flutter Online IDE
 
-git clone https://github.com/username/repo-name.git
+- How to use FlutLab? Please, view our https://flutlab.io/docs
+- Discover a marketplace of ready-to-use Flutter projects https://flutlab.io/widgetbay
+- Join the discussion and conversation on https://flutlab.io/residents
 
-    Open the project in your preferred IDE (e.g. Android Studio, VS Code).
-    Run the app using flutter run command.
-
-App Structure
-
-The app consists of several screens that can be navigated using the bottom navigation bar.
-
-    Splash screen: Displays the app logo and name for 4 seconds before redirecting to the login screen.
-    Login screen: Allows users to log in to the app using their email and password.
-    Signup screen: Allows users to create an account by providing their name, email, and password.
-    Email verification screen: Displays a message that an email has been sent to the user's email address with a verification link.
-    Home screen: Displays a list of grocery items that can be added to the shopping cart. Users can also view their shopping cart and checkout.
-
-Built With
-
-    Flutter - The framework used
-    Dart - The programming language used
-
-Authors
-
-    Aimar, Kasparov, Raissa
-
-Acknowledgments
-
-    Flutter documentation
-    Flutter tutorial
+If you have some questions regarding FlutLab, you can ask on https://flutlab.io/faq

@@ -1,3 +1,5 @@
+import 'dart:html';
+import 'dart:ui';
 import 'dart:async';
 import 'home.dart';
 import 'login.dart';
@@ -69,3 +71,5 @@ class _SplashState extends State<Splash> {
             ])));
   }
 }
+
+

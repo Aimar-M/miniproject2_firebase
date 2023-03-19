@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:rushgrocery/cart.dart';
+import 'package:rushgrocery/orders.dart';
+import 'browse.dart';
+import 'wishlist.dart';
 
 class home extends StatefulWidget {
   @override
@@ -6,6 +10,12 @@ class home extends StatefulWidget {
 }
 
 class _homeState extends State<home> {
+  final List<Widget> pages = [
+    home(),
+    BrowseItemsPage(),
+    OrderPage(),
+    OrderPage(),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,8 +26,30 @@ class _homeState extends State<home> {
             textAlign: TextAlign.center,
           ),
           actions: <Widget>[
-            Icon(Icons.notifications),
-            Icon(Icons.shopping_cart),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => wishlist()),
+                );
+              },
+              child: IconButton(
+                icon: Icon(Icons.favorite),
+                onPressed: null,
+              ),
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => CartPage()),
+                );
+              },
+              child: IconButton(
+                icon: Icon(Icons.shopping_cart),
+                onPressed: null,
+              ),
+            ),
           ],
           bottom: PreferredSize(
               preferredSize: Size.fromHeight(60),
@@ -73,74 +105,115 @@ class _homeState extends State<home> {
                 mainAxisSpacing: 14,
                 crossAxisSpacing: 10,
                 children: [
-                  Stack(children: [
-                    Container(
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => BrowseItemsPage()),
+                      );
+                    },
+                    child: Stack(children: [
+                      Container(
+                          child: Image.asset(
+                        "assets/images/Rectangle 29.png",
+                      )),
+                      Positioned(
+                        left: 10,
+                        top: 10,
+                        child: Text("Pastry",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold)),
+                      )
+                    ]),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => BrowseItemsPage()),
+                      );
+                    },
+                    child: Stack(children: [
+                      Container(
                         child: Image.asset(
-                      "assets/images/Rectangle 29.png",
-                    )),
-                    Positioned(
-                      left: 10,
-                      top: 10,
-                      child: Text("Pastry",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold)),
-                    )
-                  ]),
-                  Stack(children: [
-                    Container(
-                      child: Image.asset(
-                        "assets/images/Rectangle 30.png",
+                          "assets/images/Rectangle 30.png",
+                        ),
                       ),
-                    ),
-                    Positioned(
-                      left: 10,
-                      top: 10,
-                      child: Text("Vegetables",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold)),
-                    )
-                  ]),
-                  Stack(children: [
-                    Container(
-                        child: Image.asset(
-                      "assets/images/Rectangle 31.png",
-                    )),
-                    Positioned(
-                      left: 10,
-                      top: 10,
-                      child: Text("Eggs",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold)),
-                    )
-                  ]),
-                  Stack(children: [
-                    Container(
-                        child: Image.asset("assets/images/Rectangle 32.png",
-                            fit: BoxFit.fill)),
-                    Positioned(
-                      left: 10,
-                      top: 10,
-                      child: Text("Fruit",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold)),
-                    )
-                  ])
+                      Positioned(
+                        left: 10,
+                        top: 10,
+                        child: Text("Vegetables",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold)),
+                      )
+                    ]),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => BrowseItemsPage()),
+                      );
+                    },
+                    child: Stack(children: [
+                      Container(
+                          child: Image.asset(
+                        "assets/images/Rectangle 31.png",
+                      )),
+                      Positioned(
+                        left: 10,
+                        top: 10,
+                        child: Text("Eggs",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold)),
+                      )
+                    ]),
+                  ),
+                  GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => BrowseItemsPage()),
+                        );
+                      },
+                      child: Stack(children: [
+                        Container(
+                            child: Image.asset("assets/images/Rectangle 32.png",
+                                fit: BoxFit.fill)),
+                        Positioned(
+                          left: 10,
+                          top: 10,
+                          child: Text("Fruit",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold)),
+                        )
+                      ])),
                 ],
               ),
             )
           ])),
       bottomNavigationBar: BottomNavigationBar(
+        onTap: (int index) {
+          // Navigates to the corresponding page
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => pages[index]),
+          );
+        },
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: "Home",
           ),
           BottomNavigationBarItem(icon: Icon(Icons.search), label: "Browse"),
-          BottomNavigationBarItem(icon: Icon(Icons.store), label: "Store"),
           BottomNavigationBarItem(
               icon: Icon(Icons.book), label: "Order History"),
           BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
