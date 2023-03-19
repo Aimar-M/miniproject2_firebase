@@ -4,7 +4,11 @@ A new Flutter project created with https://flutlab.io
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This project is a continuation of our previous flutter starting point application. 
+
+https://github.com/Aimar-M/MobileApp_mini_idea 
+
+This project mainly aims to implement firebase authentication to our Application
 
 A few resources to get you started if this is your first Flutter project:
 
