@@ -25,7 +25,7 @@ class _AddAddressPageState extends State<AddAddressPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Add An Address'),
+        title: const Text('Add An Address'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -35,7 +35,7 @@ class _AddAddressPageState extends State<AddAddressPage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               TextFormField(
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   labelText: 'Name',
                 ),
                 validator: (value) {
@@ -49,7 +49,7 @@ class _AddAddressPageState extends State<AddAddressPage> {
                 },
               ),
               TextFormField(
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   labelText: 'Phone',
                 ),
                 validator: (value) {
@@ -63,7 +63,7 @@ class _AddAddressPageState extends State<AddAddressPage> {
                 },
               ),
               TextFormField(
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   labelText: 'Address',
                 ),
                 validator: (value) {
@@ -77,7 +77,7 @@ class _AddAddressPageState extends State<AddAddressPage> {
                 },
               ),
               TextFormField(
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   labelText: 'City',
                 ),
                 validator: (value) {
@@ -100,8 +100,6 @@ class _AddAddressPageState extends State<AddAddressPage> {
                       width: MediaQuery.of(context).size.width * 0.80,
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.green,
-
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(30.0),
                           ),
@@ -109,7 +107,7 @@ class _AddAddressPageState extends State<AddAddressPage> {
                           primary: Colors
                               .white, // set the background color of the button
                         ),
-                        child: Text("Save",
+                        child: const Text("Save",
                             style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white,

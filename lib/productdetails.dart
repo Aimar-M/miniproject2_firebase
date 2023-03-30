@@ -122,8 +122,6 @@ class product extends StatelessWidget {
                     width: MediaQuery.of(context).size.width * 0.80,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.green,
-
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(30.0),
                         ),

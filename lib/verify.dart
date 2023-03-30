@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'home.dart';
 
 class verify extends StatefulWidget {
+  const verify({Key? key}) : super(key: key);
+
   @override
   State<verify> createState() => _verifyState();
 }
@@ -19,29 +21,30 @@ class _verifyState extends State<verify> {
             Container(
                 alignment: Alignment.topLeft,
                 child: IconButton(
-                    icon: Icon(Icons.arrow_back, color: Colors.white),
+                    icon: const Icon(Icons.arrow_back, color: Colors.white),
                     onPressed: () => Navigator.pop(context))),
-            Text("Verify your phone",
+            const Text("Verify your phone",
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
                     fontSize: 25)),
-            Text("We have sent an OTP to the \n phone number specified",
+            const Text("We have sent an OTP to the \n phone number specified",
                 textAlign: TextAlign.center,
                 style: TextStyle(color: Colors.white, fontSize: 20)),
             Form(
                 child: Column(children: [
               Padding(
-                  padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                  padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                   child: SizedBox(
                     width: MediaQuery.of(context).size.width * 0.9,
                     child: TextFormField(
-                        style: TextStyle(fontSize: 16.0),
+                        style: const TextStyle(fontSize: 16.0),
                         decoration: InputDecoration(
                             labelText: "Enter the 4 digit pin",
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(30),
-                                borderSide: BorderSide(color: Colors.white)))),
+                                borderSide:
+                                    const BorderSide(color: Colors.white)))),
                   )),
             ])),
             SizedBox(
@@ -50,7 +53,8 @@ class _verifyState extends State<verify> {
                 child: ElevatedButton(
                     onPressed: () => Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => home()),
+                          MaterialPageRoute(
+                              builder: (context) => const HomeScreen()),
                         ),
                     style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
@@ -60,7 +64,7 @@ class _verifyState extends State<verify> {
                       primary: Colors
                           .white, // set the background color of the button
                     ),
-                    child: Text("Next",
+                    child: const Text("Next",
                         style: TextStyle(
                             fontSize: 15,
                             fontWeight: FontWeight.bold,

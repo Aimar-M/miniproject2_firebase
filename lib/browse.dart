@@ -6,22 +6,23 @@ import 'productdetails.dart';
 import 'orders.dart';
 
 class BrowseItemsPage extends StatefulWidget {
+  const BrowseItemsPage({Key? key}) : super(key: key);
+
   @override
   State<BrowseItemsPage> createState() => _BrowseItemsPageState();
 }
 
 class _BrowseItemsPageState extends State<BrowseItemsPage> {
   final List<Widget> pages = [
-    home(),
-    BrowseItemsPage(),
-    OrderPage(),
-    OrderPage(),
+    const HomeScreen(),
+    const BrowseItemsPage(),
+    const OrderPage(),
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: Text(
+          title: const Text(
             'Browse',
             style: TextStyle(),
             textAlign: TextAlign.center,
@@ -31,10 +32,10 @@ class _BrowseItemsPageState extends State<BrowseItemsPage> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => wishlist()),
+                  MaterialPageRoute(builder: (context) => const wishlist()),
                 );
               },
-              child: IconButton(
+              child: const IconButton(
                 icon: Icon(Icons.favorite),
                 onPressed: null,
               ),
@@ -46,28 +47,28 @@ class _BrowseItemsPageState extends State<BrowseItemsPage> {
                   MaterialPageRoute(builder: (context) => CartPage()),
                 );
               },
-              child: IconButton(
+              child: const IconButton(
                 icon: Icon(Icons.shopping_cart),
                 onPressed: null,
               ),
             ),
           ],
           bottom: PreferredSize(
-              preferredSize: Size.fromHeight(60),
+              preferredSize: const Size.fromHeight(60),
               child: Container(
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 child: SizedBox(
                     width: 330,
                     child: BottomAppBar(
-                      shape: CircularNotchedRectangle(),
+                      shape: const CircularNotchedRectangle(),
                       child: Row(children: [
                         IconButton(
-                          icon: Icon(Icons.search),
+                          icon: const Icon(Icons.search),
                           onPressed: () {
                             // Open drawer
                           },
                         ),
-                        Expanded(
+                        const Expanded(
                           child: TextField(
                             decoration: InputDecoration(
                               hintText: 'Search Product',
@@ -104,7 +105,7 @@ class _BrowseItemsPageState extends State<BrowseItemsPage> {
                         padding: const EdgeInsets.all(8.0),
                         child: Text(
                           'Product $index',
-                          style: TextStyle(fontWeight: FontWeight.bold),
+                          style: const TextStyle(fontWeight: FontWeight.bold),
                         ),
                       ),
                       Padding(
@@ -112,7 +113,7 @@ class _BrowseItemsPageState extends State<BrowseItemsPage> {
                         child: Text(
                           '\$${(index + 1) * 10}',
                           textAlign: TextAlign.end,
-                          style: TextStyle(
+                          style: const TextStyle(
                               fontWeight: FontWeight.bold, color: Colors.green),
                         ),
                       ),
@@ -124,14 +125,16 @@ class _BrowseItemsPageState extends State<BrowseItemsPage> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: [
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: "Home",
           ),
-          BottomNavigationBarItem(icon: Icon(Icons.search), label: "Browse"),
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
+              icon: const Icon(Icons.search), label: "Browse"),
+          const BottomNavigationBarItem(
               icon: Icon(Icons.book), label: "Order History"),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
+          const BottomNavigationBarItem(
+              icon: const Icon(Icons.person), label: "Profile"),
         ],
         onTap: (int index) {
           // Navigates to the corresponding page
@@ -142,8 +145,8 @@ class _BrowseItemsPageState extends State<BrowseItemsPage> {
         },
         selectedItemColor: Colors.green,
         unselectedItemColor: Colors.grey,
-        selectedLabelStyle: TextStyle(color: Colors.green),
-        unselectedLabelStyle: TextStyle(color: Colors.grey),
+        selectedLabelStyle: const TextStyle(color: Colors.green),
+        unselectedLabelStyle: const TextStyle(color: Colors.grey),
       ),
     );
   }

@@ -1,15 +1,23 @@
 import 'package:flutter/material.dart';
 import 'home.dart';
 
-class wishlist extends StatelessWidget {
+class wishlist extends StatefulWidget {
+  const wishlist({Key? key}) : super(key: key);
+
+  @override
+  State<wishlist> createState() => _wishlistState();
+}
+
+class _wishlistState extends State<wishlist> {
   final List<Widget> pages = [
-    home(),
+    const HomeScreen(),
   ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           'Wishlist',
           style: TextStyle(),
           textAlign: TextAlign.center,
@@ -24,7 +32,7 @@ class wishlist extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Container(
+                    SizedBox(
                         width: MediaQuery.of(context).size.height * 0.30,
                         height: MediaQuery.of(context).size.height * 0.15,
                         child: Image.network(
@@ -34,7 +42,7 @@ class wishlist extends StatelessWidget {
                       padding: const EdgeInsets.all(8.0),
                       child: Text(
                         'Product $index',
-                        style: TextStyle(fontWeight: FontWeight.bold),
+                        style: const TextStyle(fontWeight: FontWeight.bold),
                       ),
                     ),
                     Padding(
@@ -42,7 +50,7 @@ class wishlist extends StatelessWidget {
                       child: Text(
                         '\$${(index + 1) * 10}',
                         textAlign: TextAlign.end,
-                        style: TextStyle(
+                        style: const TextStyle(
                             fontWeight: FontWeight.bold, color: Colors.green),
                       ),
                     ),

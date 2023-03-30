@@ -2,17 +2,18 @@ import 'package:flutter/material.dart';
 import 'home.dart';
 import 'wishlist.dart';
 import 'cart.dart';
-import 'productdetails.dart';
 import 'browse.dart';
 
 class OrderPage extends StatefulWidget {
+  const OrderPage({Key? key}) : super(key: key);
+
   @override
   State<OrderPage> createState() => _OrderPageState();
 }
 
 class _OrderPageState extends State<OrderPage> {
   final List<Widget> pages = [
-    home(),
+    const HomeScreen(),
     BrowseItemsPage(),
     OrderPage(),
     OrderPage(),

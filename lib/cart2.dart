@@ -53,8 +53,6 @@ class _CartPageState extends State<CartPage> {
                           width: MediaQuery.of(context).size.width * 0.25,
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.green,
-
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(30.0),
                               ),
@@ -197,8 +195,6 @@ class _CartPageState extends State<CartPage> {
                             width: MediaQuery.of(context).size.width * 0.80,
                             child: ElevatedButton(
                               style: ElevatedButton.styleFrom(
-                                backgroundColor: Colors.green,
-
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(30.0),
                                 ),

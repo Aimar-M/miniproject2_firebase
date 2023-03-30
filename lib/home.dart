@@ -4,23 +4,24 @@ import 'package:rushgrocery/orders.dart';
 import 'browse.dart';
 import 'wishlist.dart';
 
-class home extends StatefulWidget {
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({Key? key}) : super(key: key);
+
   @override
-  State<home> createState() => _homeState();
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _homeState extends State<home> {
+class _HomeScreenState extends State<HomeScreen> {
   final List<Widget> pages = [
-    home(),
-    BrowseItemsPage(),
-    OrderPage(),
-    OrderPage(),
+    const HomeScreen(),
+    const BrowseItemsPage(),
+    const OrderPage(),
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: Text(
+          title: const Text(
             'Groceries',
             style: TextStyle(),
             textAlign: TextAlign.center,
@@ -30,10 +31,10 @@ class _homeState extends State<home> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => wishlist()),
+                  MaterialPageRoute(builder: (context) => const wishlist()),
                 );
               },
-              child: IconButton(
+              child: const IconButton(
                 icon: Icon(Icons.favorite),
                 onPressed: null,
               ),
@@ -45,30 +46,30 @@ class _homeState extends State<home> {
                   MaterialPageRoute(builder: (context) => CartPage()),
                 );
               },
-              child: IconButton(
+              child: const IconButton(
                 icon: Icon(Icons.shopping_cart),
                 onPressed: null,
               ),
             ),
           ],
           bottom: PreferredSize(
-              preferredSize: Size.fromHeight(60),
+              preferredSize: const Size.fromHeight(60),
               child: Container(
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 child: SizedBox(
                     width: 330,
                     child: BottomAppBar(
-                      shape: CircularNotchedRectangle(),
+                      shape: const CircularNotchedRectangle(),
                       child: Row(children: [
                         IconButton(
-                          icon: Icon(Icons.search),
+                          icon: const Icon(Icons.search),
                           onPressed: () {
                             // Open drawer
                           },
                         ),
-                        Expanded(
-                          child: TextField(
-                            decoration: InputDecoration(
+                        const Expanded(
+                          child: const TextField(
+                            decoration: const InputDecoration(
                               hintText: 'Search Product',
                               border: InputBorder.none,
                             ),
@@ -83,21 +84,7 @@ class _homeState extends State<home> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
-            Container(
-                width: MediaQuery.of(context).size.width * 0.95,
-                height: MediaQuery.of(context).size.height * 0.20,
-                decoration: BoxDecoration(
-                    color: Colors.black,
-                    borderRadius: BorderRadius.circular(10)),
-                child: Center(
-                    child: Text(
-                  "START  SHOPPING  NOW",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ))),
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width * 1,
               height: MediaQuery.of(context).size.height * 0.5,
               child: GridView.count(
@@ -110,15 +97,14 @@ class _homeState extends State<home> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => BrowseItemsPage()),
+                            builder: (context) => const BrowseItemsPage()),
                       );
                     },
                     child: Stack(children: [
-                      Container(
-                          child: Image.asset(
+                      Image.asset(
                         "assets/images/Rectangle 29.png",
-                      )),
-                      Positioned(
+                      ),
+                      const Positioned(
                         left: 10,
                         top: 10,
                         child: Text("Pastry",
@@ -133,16 +119,14 @@ class _homeState extends State<home> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => BrowseItemsPage()),
+                            builder: (context) => const BrowseItemsPage()),
                       );
                     },
                     child: Stack(children: [
-                      Container(
-                        child: Image.asset(
-                          "assets/images/Rectangle 30.png",
-                        ),
+                      Image.asset(
+                        "assets/images/Rectangle 30.png",
                       ),
-                      Positioned(
+                      const Positioned(
                         left: 10,
                         top: 10,
                         child: Text("Vegetables",
@@ -157,15 +141,14 @@ class _homeState extends State<home> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => BrowseItemsPage()),
+                            builder: (context) => const BrowseItemsPage()),
                       );
                     },
                     child: Stack(children: [
-                      Container(
-                          child: Image.asset(
+                      Image.asset(
                         "assets/images/Rectangle 31.png",
-                      )),
-                      Positioned(
+                      ),
+                      const Positioned(
                         left: 10,
                         top: 10,
                         child: Text("Eggs",
@@ -180,14 +163,13 @@ class _homeState extends State<home> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => BrowseItemsPage()),
+                              builder: (context) => const BrowseItemsPage()),
                         );
                       },
                       child: Stack(children: [
-                        Container(
-                            child: Image.asset("assets/images/Rectangle 32.png",
-                                fit: BoxFit.fill)),
-                        Positioned(
+                        Image.asset("assets/images/Rectangle 29.png",
+                            fit: BoxFit.fill),
+                        const Positioned(
                           left: 10,
                           top: 10,
                           child: Text("Fruit",
@@ -209,19 +191,21 @@ class _homeState extends State<home> {
           );
         },
         items: [
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: "Home",
           ),
-          BottomNavigationBarItem(icon: Icon(Icons.search), label: "Browse"),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.book), label: "Order History"),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
+          const BottomNavigationBarItem(
+              icon: Icon(Icons.search), label: "Browse"),
+          const BottomNavigationBarItem(
+              icon: const Icon(Icons.book), label: "Order History"),
+          const BottomNavigationBarItem(
+              icon: const Icon(Icons.person), label: "Profile"),
         ],
         selectedItemColor: Colors.green,
         unselectedItemColor: Colors.grey,
-        selectedLabelStyle: TextStyle(color: Colors.green),
-        unselectedLabelStyle: TextStyle(color: Colors.grey),
+        selectedLabelStyle: const TextStyle(color: Colors.green),
+        unselectedLabelStyle: const TextStyle(color: Colors.grey),
       ),
     );
   }
