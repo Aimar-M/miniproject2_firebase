@@ -6,23 +6,23 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="19"
-9        android:targetSdkVersion="31" />
+9        android:targetSdkVersion="33" />
 10    <!--
 11         Flutter needs it to communicate with the running application
 12         to allow setting breakpoints, to provide hot reload, etc.
 13    -->
 14    <uses-permission android:name="android.permission.INTERNET" />
-14-->C:\Users\Hp\Desktop\miniproject2_firebase-1\android\app\src\debug\AndroidManifest.xml:6:5-66
-14-->C:\Users\Hp\Desktop\miniproject2_firebase-1\android\app\src\debug\AndroidManifest.xml:6:22-64
+14-->C:\Users\Hp\Documents\miniproject2_firebase\android\app\src\debug\AndroidManifest.xml:6:5-66
+14-->C:\Users\Hp\Documents\miniproject2_firebase\android\app\src\debug\AndroidManifest.xml:6:22-64
 15    <uses-permission android:name="android.permission.WAKE_LOCK" />
-15-->[:firebase_messaging] C:\Users\Hp\Desktop\miniproject2_firebase-1\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:8:5-68
-15-->[:firebase_messaging] C:\Users\Hp\Desktop\miniproject2_firebase-1\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:8:22-65
+15-->[:firebase_messaging] C:\Users\Hp\Documents\miniproject2_firebase\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:8:5-68
+15-->[:firebase_messaging] C:\Users\Hp\Documents\miniproject2_firebase\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:8:22-65
 16    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- Permissions options for the `notification` group -->
-16-->[:firebase_messaging] C:\Users\Hp\Desktop\miniproject2_firebase-1\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:9:5-79
-16-->[:firebase_messaging] C:\Users\Hp\Desktop\miniproject2_firebase-1\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:9:22-76
+16-->[:firebase_messaging] C:\Users\Hp\Documents\miniproject2_firebase\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:9:5-79
+16-->[:firebase_messaging] C:\Users\Hp\Documents\miniproject2_firebase\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:9:22-76
 17    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" /> <!-- Required by older versions of Google Play services to create IID tokens -->
-17-->[:firebase_messaging] C:\Users\Hp\Desktop\miniproject2_firebase-1\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-77
-17-->[:firebase_messaging] C:\Users\Hp\Desktop\miniproject2_firebase-1\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:11:22-74
+17-->[:firebase_messaging] C:\Users\Hp\Documents\miniproject2_firebase\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-77
+17-->[:firebase_messaging] C:\Users\Hp\Documents\miniproject2_firebase\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:11:22-74
 18    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
 18-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\Hp\.gradle\caches\transforms-2\files-2.1\a4224124e9ba5803905dcbe0da55f2b5\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:28:5-82
 18-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\Hp\.gradle\caches\transforms-2\files-2.1\a4224124e9ba5803905dcbe0da55f2b5\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:28:22-79
@@ -68,43 +68,43 @@
 57            android:value="2" />
 58
 59        <service
-59-->[:firebase_auth] C:\Users\Hp\Desktop\miniproject2_firebase-1\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-12:19
+59-->[:firebase_auth] C:\Users\Hp\Documents\miniproject2_firebase\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-12:19
 60            android:name="com.google.firebase.components.ComponentDiscoveryService"
-60-->[:firebase_auth] C:\Users\Hp\Desktop\miniproject2_firebase-1\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:8:18-89
+60-->[:firebase_auth] C:\Users\Hp\Documents\miniproject2_firebase\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:8:18-89
 61            android:directBootAware="true"
 61-->[com.google.firebase:firebase-common:20.3.1] C:\Users\Hp\.gradle\caches\transforms-2\files-2.1\8c1b1ced31f663ce09f1f33c942e17a3\jetified-firebase-common-20.3.1\AndroidManifest.xml:34:13-43
 62            android:exported="false" >
 62-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\Hp\.gradle\caches\transforms-2\files-2.1\a4224124e9ba5803905dcbe0da55f2b5\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:54:13-37
 63            <meta-data
-63-->[:firebase_auth] C:\Users\Hp\Desktop\miniproject2_firebase-1\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
+63-->[:firebase_auth] C:\Users\Hp\Documents\miniproject2_firebase\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
 64                android:name="com.google.firebase.components:io.flutter.plugins.firebase.auth.FlutterFirebaseAuthRegistrar"
-64-->[:firebase_auth] C:\Users\Hp\Desktop\miniproject2_firebase-1\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-124
+64-->[:firebase_auth] C:\Users\Hp\Documents\miniproject2_firebase\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-124
 65                android:value="com.google.firebase.components.ComponentRegistrar" />
-65-->[:firebase_auth] C:\Users\Hp\Desktop\miniproject2_firebase-1\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
+65-->[:firebase_auth] C:\Users\Hp\Documents\miniproject2_firebase\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
 66            <meta-data
-66-->[:firebase_database] C:\Users\Hp\Desktop\miniproject2_firebase-1\build\firebase_database\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
+66-->[:firebase_database] C:\Users\Hp\Documents\miniproject2_firebase\build\firebase_database\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
 67                android:name="com.google.firebase.components:io.flutter.plugins.firebase.database.FlutterFirebaseAppRegistrar"
-67-->[:firebase_database] C:\Users\Hp\Desktop\miniproject2_firebase-1\build\firebase_database\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-127
+67-->[:firebase_database] C:\Users\Hp\Documents\miniproject2_firebase\build\firebase_database\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-127
 68                android:value="com.google.firebase.components.ComponentRegistrar" />
-68-->[:firebase_database] C:\Users\Hp\Desktop\miniproject2_firebase-1\build\firebase_database\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
+68-->[:firebase_database] C:\Users\Hp\Documents\miniproject2_firebase\build\firebase_database\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
 69            <meta-data
-69-->[:cloud_firestore] C:\Users\Hp\Desktop\miniproject2_firebase-1\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
+69-->[:cloud_firestore] C:\Users\Hp\Documents\miniproject2_firebase\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
 70                android:name="com.google.firebase.components:io.flutter.plugins.firebase.firestore.FlutterFirebaseFirestoreRegistrar"
-70-->[:cloud_firestore] C:\Users\Hp\Desktop\miniproject2_firebase-1\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-134
+70-->[:cloud_firestore] C:\Users\Hp\Documents\miniproject2_firebase\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-134
 71                android:value="com.google.firebase.components.ComponentRegistrar" />
-71-->[:cloud_firestore] C:\Users\Hp\Desktop\miniproject2_firebase-1\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
+71-->[:cloud_firestore] C:\Users\Hp\Documents\miniproject2_firebase\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
 72            <meta-data
-72-->[:firebase_messaging] C:\Users\Hp\Desktop\miniproject2_firebase-1\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:36:13-38:85
+72-->[:firebase_messaging] C:\Users\Hp\Documents\miniproject2_firebase\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:36:13-38:85
 73                android:name="com.google.firebase.components:io.flutter.plugins.firebase.messaging.FlutterFirebaseAppRegistrar"
-73-->[:firebase_messaging] C:\Users\Hp\Desktop\miniproject2_firebase-1\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:37:17-128
+73-->[:firebase_messaging] C:\Users\Hp\Documents\miniproject2_firebase\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:37:17-128
 74                android:value="com.google.firebase.components.ComponentRegistrar" />
-74-->[:firebase_messaging] C:\Users\Hp\Desktop\miniproject2_firebase-1\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:38:17-82
+74-->[:firebase_messaging] C:\Users\Hp\Documents\miniproject2_firebase\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:38:17-82
 75            <meta-data
-75-->[:firebase_core] C:\Users\Hp\Desktop\miniproject2_firebase-1\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
+75-->[:firebase_core] C:\Users\Hp\Documents\miniproject2_firebase\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
 76                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
-76-->[:firebase_core] C:\Users\Hp\Desktop\miniproject2_firebase-1\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-124
+76-->[:firebase_core] C:\Users\Hp\Documents\miniproject2_firebase\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-124
 77                android:value="com.google.firebase.components.ComponentRegistrar" />
-77-->[:firebase_core] C:\Users\Hp\Desktop\miniproject2_firebase-1\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
+77-->[:firebase_core] C:\Users\Hp\Documents\miniproject2_firebase\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
 78            <meta-data
 78-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\Hp\.gradle\caches\transforms-2\files-2.1\a4224124e9ba5803905dcbe0da55f2b5\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:55:13-57:85
 79                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
@@ -143,53 +143,53 @@
 95-->[com.google.firebase:firebase-installations:17.1.3] C:\Users\Hp\.gradle\caches\transforms-2\files-2.1\51f8050d06a4ecedb4079c8f44ff46ee\jetified-firebase-installations-17.1.3\AndroidManifest.xml:19:17-82
 96        </service>
 97        <service
-97-->[:firebase_messaging] C:\Users\Hp\Desktop\miniproject2_firebase-1\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:14:9-17:72
+97-->[:firebase_messaging] C:\Users\Hp\Documents\miniproject2_firebase\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:14:9-17:72
 98            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingBackgroundService"
-98-->[:firebase_messaging] C:\Users\Hp\Desktop\miniproject2_firebase-1\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-107
+98-->[:firebase_messaging] C:\Users\Hp\Documents\miniproject2_firebase\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-107
 99            android:exported="false"
-99-->[:firebase_messaging] C:\Users\Hp\Desktop\miniproject2_firebase-1\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:16:13-37
+99-->[:firebase_messaging] C:\Users\Hp\Documents\miniproject2_firebase\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:16:13-37
 100            android:permission="android.permission.BIND_JOB_SERVICE" />
-100-->[:firebase_messaging] C:\Users\Hp\Desktop\miniproject2_firebase-1\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:17:13-69
+100-->[:firebase_messaging] C:\Users\Hp\Documents\miniproject2_firebase\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:17:13-69
 101        <service
-101-->[:firebase_messaging] C:\Users\Hp\Desktop\miniproject2_firebase-1\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:18:9-24:19
+101-->[:firebase_messaging] C:\Users\Hp\Documents\miniproject2_firebase\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:18:9-24:19
 102            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingService"
-102-->[:firebase_messaging] C:\Users\Hp\Desktop\miniproject2_firebase-1\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:19:13-97
+102-->[:firebase_messaging] C:\Users\Hp\Documents\miniproject2_firebase\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:19:13-97
 103            android:exported="false" >
-103-->[:firebase_messaging] C:\Users\Hp\Desktop\miniproject2_firebase-1\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:20:13-37
+103-->[:firebase_messaging] C:\Users\Hp\Documents\miniproject2_firebase\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:20:13-37
 104            <intent-filter>
-104-->[:firebase_messaging] C:\Users\Hp\Desktop\miniproject2_firebase-1\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:21:13-23:29
+104-->[:firebase_messaging] C:\Users\Hp\Documents\miniproject2_firebase\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:21:13-23:29
 105                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-105-->[:firebase_messaging] C:\Users\Hp\Desktop\miniproject2_firebase-1\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:22:17-78
-105-->[:firebase_messaging] C:\Users\Hp\Desktop\miniproject2_firebase-1\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:22:25-75
+105-->[:firebase_messaging] C:\Users\Hp\Documents\miniproject2_firebase\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:22:17-78
+105-->[:firebase_messaging] C:\Users\Hp\Documents\miniproject2_firebase\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:22:25-75
 106            </intent-filter>
 107        </service>
 108
 109        <receiver
-109-->[:firebase_messaging] C:\Users\Hp\Desktop\miniproject2_firebase-1\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:26:9-33:20
+109-->[:firebase_messaging] C:\Users\Hp\Documents\miniproject2_firebase\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:26:9-33:20
 110            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingReceiver"
-110-->[:firebase_messaging] C:\Users\Hp\Desktop\miniproject2_firebase-1\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:27:13-98
+110-->[:firebase_messaging] C:\Users\Hp\Documents\miniproject2_firebase\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:27:13-98
 111            android:exported="true"
-111-->[:firebase_messaging] C:\Users\Hp\Desktop\miniproject2_firebase-1\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:28:13-36
+111-->[:firebase_messaging] C:\Users\Hp\Documents\miniproject2_firebase\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:28:13-36
 112            android:permission="com.google.android.c2dm.permission.SEND" >
-112-->[:firebase_messaging] C:\Users\Hp\Desktop\miniproject2_firebase-1\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:29:13-73
+112-->[:firebase_messaging] C:\Users\Hp\Documents\miniproject2_firebase\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:29:13-73
 113            <intent-filter>
-113-->[:firebase_messaging] C:\Users\Hp\Desktop\miniproject2_firebase-1\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:30:13-32:29
+113-->[:firebase_messaging] C:\Users\Hp\Documents\miniproject2_firebase\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:30:13-32:29
 114                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-114-->[:firebase_messaging] C:\Users\Hp\Desktop\miniproject2_firebase-1\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:31:17-81
-114-->[:firebase_messaging] C:\Users\Hp\Desktop\miniproject2_firebase-1\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:31:25-78
+114-->[:firebase_messaging] C:\Users\Hp\Documents\miniproject2_firebase\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:31:17-81
+114-->[:firebase_messaging] C:\Users\Hp\Documents\miniproject2_firebase\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:31:25-78
 115            </intent-filter>
 116        </receiver>
 117
 118        <provider
-118-->[:firebase_messaging] C:\Users\Hp\Desktop\miniproject2_firebase-1\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:41:9-45:38
+118-->[:firebase_messaging] C:\Users\Hp\Documents\miniproject2_firebase\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:41:9-45:38
 119            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingInitProvider"
-119-->[:firebase_messaging] C:\Users\Hp\Desktop\miniproject2_firebase-1\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:42:13-102
+119-->[:firebase_messaging] C:\Users\Hp\Documents\miniproject2_firebase\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:42:13-102
 120            android:authorities="com.example.rushgrocery.flutterfirebasemessaginginitprovider"
-120-->[:firebase_messaging] C:\Users\Hp\Desktop\miniproject2_firebase-1\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:43:13-88
+120-->[:firebase_messaging] C:\Users\Hp\Documents\miniproject2_firebase\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:43:13-88
 121            android:exported="false"
-121-->[:firebase_messaging] C:\Users\Hp\Desktop\miniproject2_firebase-1\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:44:13-37
+121-->[:firebase_messaging] C:\Users\Hp\Documents\miniproject2_firebase\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:44:13-37
 122            android:initOrder="99" />
-122-->[:firebase_messaging] C:\Users\Hp\Desktop\miniproject2_firebase-1\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:45:13-35
+122-->[:firebase_messaging] C:\Users\Hp\Documents\miniproject2_firebase\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:45:13-35
 123
 124        <uses-library
 124-->[androidx.window:window:1.0.0-beta04] C:\Users\Hp\.gradle\caches\transforms-2\files-2.1\59a643c50371da8450b294cec77205a1\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
@@ -213,10 +213,10 @@
 134            android:permission="com.google.android.c2dm.permission.SEND" >
 134-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\Hp\.gradle\caches\transforms-2\files-2.1\a4224124e9ba5803905dcbe0da55f2b5\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:34:13-73
 135            <intent-filter>
-135-->[:firebase_messaging] C:\Users\Hp\Desktop\miniproject2_firebase-1\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:30:13-32:29
+135-->[:firebase_messaging] C:\Users\Hp\Documents\miniproject2_firebase\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:30:13-32:29
 136                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-136-->[:firebase_messaging] C:\Users\Hp\Desktop\miniproject2_firebase-1\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:31:17-81
-136-->[:firebase_messaging] C:\Users\Hp\Desktop\miniproject2_firebase-1\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:31:25-78
+136-->[:firebase_messaging] C:\Users\Hp\Documents\miniproject2_firebase\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:31:17-81
+136-->[:firebase_messaging] C:\Users\Hp\Documents\miniproject2_firebase\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:31:25-78
 137            </intent-filter>
 138        </receiver>
 139        <!--
@@ -232,10 +232,10 @@
 146            android:exported="false" >
 146-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\Hp\.gradle\caches\transforms-2\files-2.1\a4224124e9ba5803905dcbe0da55f2b5\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:47:13-37
 147            <intent-filter android:priority="-500" >
-147-->[:firebase_messaging] C:\Users\Hp\Desktop\miniproject2_firebase-1\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:21:13-23:29
+147-->[:firebase_messaging] C:\Users\Hp\Documents\miniproject2_firebase\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:21:13-23:29
 148                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-148-->[:firebase_messaging] C:\Users\Hp\Desktop\miniproject2_firebase-1\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:22:17-78
-148-->[:firebase_messaging] C:\Users\Hp\Desktop\miniproject2_firebase-1\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:22:25-75
+148-->[:firebase_messaging] C:\Users\Hp\Documents\miniproject2_firebase\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:22:17-78
+148-->[:firebase_messaging] C:\Users\Hp\Documents\miniproject2_firebase\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:22:25-75
 149            </intent-filter>
 150        </service>
 151        <service

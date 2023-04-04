@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Hp\\Desktop\\miniproject2_firebase-1\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-pa\\values-pa.xml",
+            "outputFile": "C:\\Users\\Hp\\Documents\\miniproject2_firebase\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-pa\\values-pa.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Hp\\.gradle\\caches\\transforms-2\\files-2.1\\b66b47b843e7f8a137802d9295e04811\\jetified-play-services-basement-18.1.0\\res\\values-pa\\values.xml",

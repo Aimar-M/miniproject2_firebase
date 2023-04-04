@@ -1,8 +1,27 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Hp\\Desktop\\miniproject2_firebase-1\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+            "outputFile": "C:\\Users\\Hp\\Documents\\miniproject2_firebase\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
             "map": [
+                {
+                    "source": "C:\\Users\\Hp\\Documents\\miniproject2_firebase\\android\\app\\src\\main\\res\\values\\styles.xml",
+                    "from": {
+                        "startLines": "3,14",
+                        "startColumns": "4,4",
+                        "startOffsets": "176,821",
+                        "endLines": "7,16",
+                        "endColumns": "12,12",
+                        "endOffsets": "472,987"
+                    },
+                    "to": {
+                        "startLines": "138,143",
+                        "startColumns": "4,4",
+                        "startOffsets": "10077,10374",
+                        "endLines": "142,145",
+                        "endColumns": "12,12",
+                        "endOffsets": "10369,10538"
+                    }
+                },
                 {
                     "source": "C:\\Users\\Hp\\.gradle\\caches\\transforms-2\\files-2.1\\0f77cac948266fe3e9b723eb32b9d817\\browser-1.4.0\\res\\values\\values.xml",
                     "from": {
@@ -57,25 +76,6 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Hp\\Desktop\\miniproject2_firebase-1\\android\\app\\src\\main\\res\\values\\styles.xml",
-                    "from": {
-                        "startLines": "3,14",
-                        "startColumns": "4,4",
-                        "startOffsets": "176,821",
-                        "endLines": "7,16",
-                        "endColumns": "12,12",
-                        "endOffsets": "472,987"
-                    },
-                    "to": {
-                        "startLines": "138,143",
-                        "startColumns": "4,4",
-                        "startOffsets": "10077,10374",
-                        "endLines": "142,145",
-                        "endColumns": "12,12",
-                        "endOffsets": "10369,10538"
-                    }
-                },
-                {
                     "source": "C:\\Users\\Hp\\.gradle\\caches\\transforms-2\\files-2.1\\f059356b26595b15f99c6740ac12a140\\core-1.6.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,89,90,94,95,96,97,104,111,159,191,228",
@@ -114,6 +114,23 @@
                     }
                 },
                 {
+                    "source": "C:\\Users\\Hp\\Documents\\miniproject2_firebase\\build\\app\\generated\\res\\google-services\\debug\\values\\values.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "55,199,281,385,494,614,714",
+                        "endColumns": "143,81,103,108,119,99,76",
+                        "endOffsets": "194,276,380,489,609,709,786"
+                    },
+                    "to": {
+                        "startLines": "126,131,132,133,134,135,136",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "8973,9414,9496,9600,9709,9829,9929",
+                        "endColumns": "143,81,103,108,119,99,76",
+                        "endOffsets": "9112,9491,9595,9704,9824,9924,10001"
+                    }
+                },
+                {
                     "source": "C:\\Users\\Hp\\.gradle\\caches\\transforms-2\\files-2.1\\a4224124e9ba5803905dcbe0da55f2b5\\jetified-firebase-messaging-23.1.2\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2",
@@ -128,23 +145,6 @@
                         "startOffsets": "9332",
                         "endColumns": "81",
                         "endOffsets": "9409"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Hp\\Desktop\\miniproject2_firebase-1\\build\\app\\generated\\res\\google-services\\debug\\values\\values.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "55,199,281,385,494,614,714",
-                        "endColumns": "143,81,103,108,119,99,76",
-                        "endOffsets": "194,276,380,489,609,709,786"
-                    },
-                    "to": {
-                        "startLines": "126,131,132,133,134,135,136",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "8973,9414,9496,9600,9709,9829,9929",
-                        "endColumns": "143,81,103,108,119,99,76",
-                        "endOffsets": "9112,9491,9595,9704,9824,9924,10001"
                     }
                 }
             ]

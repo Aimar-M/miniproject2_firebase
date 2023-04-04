@@ -4,7 +4,6 @@ import 'home.dart';
 import 'auth_screen.dart';
 import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
-import 'package:rushgrocery/auth_screen.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

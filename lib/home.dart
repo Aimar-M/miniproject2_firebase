@@ -21,6 +21,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+          toolbarHeight: kToolbarHeight + MediaQuery.of(context).padding.top,
           title: const Text(
             'Groceries',
             style: TextStyle(),

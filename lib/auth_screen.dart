@@ -1,7 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'auth.dart';
+import 'dart:async';
 
 class AuthScreen extends StatefulWidget {
   const AuthScreen({Key? key}) : super(key: key);
@@ -13,14 +15,24 @@ class AuthScreen extends StatefulWidget {
 class _AuthScreenState extends State<AuthScreen> {
   bool _isLogin = true;
   String? errorMessage = '';
-  bool _loading = false;
+  bool _loading = true;
   final _formKey = GlobalKey<FormState>();
+  Timer? _debounceTimer;
+  final textFormFieldFocusNode = FocusNode();
 
   final TextEditingController _firstNameController = TextEditingController();
   final TextEditingController _lastNameController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _phoneNumberController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+
+  final Map<String, bool> _isControllerEmpty = {
+    "firstName": true,
+    'lastName': true,
+    'email': true,
+    'phoneNumber': true,
+    'password': true,
+  };
 
   Future<void> signInWithEmailAndPassword() async {
     try {
@@ -80,6 +92,22 @@ class _AuthScreenState extends State<AuthScreen> {
     }
   }
 
+  String _toCamelCase(String input) {
+    if (input.isEmpty) {
+      return input;
+    }
+    final words = input.split(" ");
+    final firstWord = words.first.toLowerCase();
+    final restOfWords = words.skip(1);
+    return "$firstWord${restOfWords.map((word) => "${word[0].toUpperCase()}${word.substring(1)}").join("")}";
+  }
+
+  @override
+  void dispose() {
+    _debounceTimer?.cancel();
+    super.dispose();
+  }
+
   void handleSubmit() async {
     if (!_formKey.currentState!.validate()) return;
 
@@ -94,21 +122,61 @@ class _AuthScreenState extends State<AuthScreen> {
   Widget _entryField(
     String title,
     TextEditingController controller,
+    String controllerName,
   ) {
-    return TextFormField(
-        controller: controller,
-        decoration: InputDecoration(
-            hintText: title,
-            focusColor: Colors.black,
-            focusedBorder: const UnderlineInputBorder(
-                borderSide: BorderSide(color: Colors.black, width: 2))),
-        validator: (value) {
-          if (value == null || value.isEmpty) {
-            return 'Please enter your $title';
-          }
-          return null;
-        },
-        obscureText: title.toLowerCase().trim() == 'password');
+    return Padding(
+        padding: const EdgeInsets.only(bottom: 30),
+        child: TextFormField(
+            controller: controller,
+            style: GoogleFonts.montserrat(
+              textStyle: const TextStyle(
+                fontSize: 20.0,
+                fontWeight: FontWeight.w400,
+                fontStyle: FontStyle.normal,
+                color: Color(0xffffffff),
+              ),
+            ),
+            decoration: InputDecoration(
+                hintText: title,
+                contentPadding:
+                    const EdgeInsets.only(left: 20, bottom: 10, top: 10),
+                hintStyle: GoogleFonts.montserrat(
+                  textStyle: const TextStyle(
+                    fontSize: 18.0,
+                    fontWeight: FontWeight.w300,
+                    fontStyle: FontStyle.normal,
+                    color: Color(0xffffffff),
+                  ),
+                ),
+                labelText: _isControllerEmpty.containsKey(controllerName) &&
+                        _isControllerEmpty[controllerName] != true
+                    ? null
+                    : title.toLowerCase(),
+                labelStyle: GoogleFonts.montserrat(
+                  textStyle: const TextStyle(
+                      fontSize: 20.0,
+                      letterSpacing: 4,
+                      fontWeight: FontWeight.w500,
+                      fontStyle: FontStyle.normal,
+                      color: Colors.black),
+                ),
+                enabledBorder: OutlineInputBorder(
+                    borderSide: const BorderSide(color: Colors.white),
+                    borderRadius: BorderRadius.circular(100)),
+                focusedBorder: OutlineInputBorder(
+                    borderSide: const BorderSide(
+                        color: Color.fromARGB(255, 79, 77, 77)),
+                    borderRadius: BorderRadius.circular(100))),
+            validator: (value) {
+              if (value == null || value.isEmpty) {
+                return 'Please enter your $title';
+              }
+              return null;
+            },
+            obscureText: title.toLowerCase().trim() == 'password',
+            onChanged: (value) {
+              _isControllerEmpty[controllerName] = value == "";
+            }));
   }
 
   Widget _errorMessage() {
@@ -124,40 +192,88 @@ class _AuthScreenState extends State<AuthScreen> {
     );
   }
 
+  Widget _forgotPasswordButton() {
+    return Column(children: [
+      const SizedBox(height: 20),
+      TextButton(
+          onPressed: () {},
+          child: Text(
+            'Forgot your password?',
+            style: GoogleFonts.montserrat(
+              textStyle: const TextStyle(
+                fontSize: 18.0,
+                fontWeight: FontWeight.w300,
+                fontStyle: FontStyle.normal,
+                color: Color(0xffffffff),
+              ),
+            ),
+          ))
+    ]);
+  }
+
   Widget _submitButton() {
-    return Column(
-      children: [
-        const SizedBox(
-          height: 20,
-        ),
-        ElevatedButton(
-          onPressed: () => handleSubmit(),
-          child: _loading
-              ? const SizedBox(
-                  width: 20,
-                  height: 20,
-                  child: CircularProgressIndicator(
-                    color: Colors.white,
-                    strokeWidth: 2,
-                  ))
-              : Text(_isLogin ? 'Login' : 'Register'),
-        ),
-      ],
+    return ElevatedButton(
+      onPressed: () => handleSubmit(),
+      style: ElevatedButton.styleFrom(
+        backgroundColor: const Color(0xffffffff),
+        foregroundColor: const Color(0xff13B58C),
+        minimumSize: const Size.fromHeight(45),
+        shape: const StadiumBorder(),
+      ),
+      child: _loading
+          ? const SizedBox(
+              width: 30,
+              height: 30,
+              child: CircularProgressIndicator(
+                color: Colors.white,
+                strokeWidth: 2,
+              ),
+            )
+          : Text(
+              _isLogin ? 'Login' : 'Create',
+              style: GoogleFonts.montserrat(
+                textStyle: const TextStyle(
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.w700,
+                  fontStyle: FontStyle.normal,
+                ),
+              ),
+            ),
     );
   }
 
   Widget _loginOrRegisterButton() {
-    return TextButton(
-        onPressed: () {
-          setState(() {
-            _isLogin = !_isLogin;
-            _resetForm();
-            _formKey.currentState?.reset();
-            errorMessage = '';
-          });
-        },
-        child: Text(_isLogin ? 'Register Instead' : 'Login Instead',
-            style: const TextStyle(fontSize: 12)));
+    return Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
+      Text(_isLogin ? "Don't have an account?" : "Have an account?",
+          style: GoogleFonts.montserrat(
+            textStyle: const TextStyle(
+              fontSize: 18.0,
+              fontWeight: FontWeight.w300,
+              fontStyle: FontStyle.normal,
+              color: Color(0xffffffff),
+            ),
+          )),
+      TextButton(
+          onPressed: () {
+            setState(() {
+              _isLogin = !_isLogin;
+              _resetForm();
+              _formKey.currentState?.reset();
+              errorMessage = '';
+            });
+          },
+          child: Text(
+            _isLogin ? 'Sign Up' : 'Sign In',
+            style: GoogleFonts.montserrat(
+              textStyle: const TextStyle(
+                fontSize: 18.0,
+                fontWeight: FontWeight.bold,
+                fontStyle: FontStyle.normal,
+                color: Color(0xffffffff),
+              ),
+            ),
+          ))
+    ]);
   }
 
   void _resetForm() {
@@ -171,56 +287,81 @@ class _AuthScreenState extends State<AuthScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xff13B58C),
       body: Column(
         children: [
           Expanded(
-            child: Center(
-              child: SingleChildScrollView(
-                child: SafeArea(
-                  child: Padding(
-                    padding: const EdgeInsets.all(16.0),
-                    child: Form(
-                      key: _formKey,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: <Widget>[
-                          const Text(
-                            "Welcome to Rush Grocery",
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.green,
-                              fontSize: 20,
-                            ),
-                          ),
-                          if (!_isLogin)
-                            _entryField(
-                              'first name',
-                              _firstNameController,
-                            ),
-                          if (!_isLogin)
-                            _entryField(
-                              'last name',
-                              _lastNameController,
-                            ),
-                          if (!_isLogin)
-                            _entryField(
-                              'phone number',
-                              _phoneNumberController,
-                            ),
+            child: SingleChildScrollView(
+              child: SafeArea(
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Form(
+                    key: _formKey,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: <Widget>[
+                        Padding(
+                            padding: EdgeInsets.only(top: _isLogin ? 173 : 30),
+                            child: Text(
+                              "Welcome to Rush Grocery",
+                              style: GoogleFonts.montserrat(
+                                textStyle: const TextStyle(
+                                  fontSize: 24.0,
+                                  fontWeight: FontWeight.w500,
+                                  fontStyle: FontStyle.normal,
+                                  color: Color(0xffffffff),
+                                ),
+                              ),
+                            )),
+                        if (!_isLogin)
+                          Padding(
+                              padding:
+                                  const EdgeInsets.only(top: 30, bottom: 30),
+                              child: Text(
+                                "Create an Account",
+                                style: GoogleFonts.montserrat(
+                                  textStyle: const TextStyle(
+                                    fontSize: 16.0,
+                                    fontWeight: FontWeight.w300,
+                                    fontStyle: FontStyle.normal,
+                                    color: Color(0xffffffff),
+                                  ),
+                                ),
+                              )),
+                        if (_isLogin)
+                          Padding(
+                              padding:
+                                  const EdgeInsets.only(top: 85, bottom: 35),
+                              child: Text(
+                                "Login to your account",
+                                style: GoogleFonts.montserrat(
+                                  textStyle: const TextStyle(
+                                    fontSize: 16.0,
+                                    fontWeight: FontWeight.normal,
+                                    fontStyle: FontStyle.normal,
+                                    color: Color(0xffffffff),
+                                  ),
+                                ),
+                              )),
+                        if (!_isLogin)
                           _entryField(
-                            'email',
-                            _emailController,
-                          ),
+                              'First Name', _firstNameController, 'firstName'),
+                        if (!_isLogin)
                           _entryField(
-                            'password',
-                            _passwordController,
-                          ),
-                          _errorMessage(),
-                          _submitButton(),
-                          _loginOrRegisterButton(),
-                        ],
-                      ),
+                              'Last Name', _lastNameController, 'lastName'),
+                        if (!_isLogin)
+                          _entryField('Phone Number', _phoneNumberController,
+                              'phoneNumber'),
+                        _entryField(
+                            'Email Address', _emailController, 'emailAddress'),
+                        _entryField(
+                            'Password', _passwordController, 'password'),
+                        _errorMessage(),
+                        _submitButton(),
+                        if (_isLogin) _forgotPasswordButton(),
+                        _loginOrRegisterButton(),
+                      ],
                     ),
                   ),
                 ),
